@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { uploadFile } from "./actions";
+import { uploadFile } from "../actions";
 
 const UploadFileForm = () => {
   const [loading, setLoading] = useState(false);

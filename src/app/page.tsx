@@ -1,7 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
-import UploadFileForm from "./UploadFileForm";
-import FilesList from "./FilesList";
+import UploadFileForm from "./_components/UploadFileForm";
+import FilesList from "./_components/FilesList";
 
 const Home = async () => {
   const supabase = createClient();
