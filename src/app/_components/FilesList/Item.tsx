@@ -1,4 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
+import DeleteFile from "./DeleteFile";
 
 const Item = async ({ path }: { path: string }) => {
   const supabase = createClient();
@@ -22,6 +23,7 @@ const Item = async ({ path }: { path: string }) => {
         Предпросмотр
       </a>
       <a href={downloadUrl.signedUrl}>Скачать</a>
+      <DeleteFile path={path} />
     </li>
   );
 };

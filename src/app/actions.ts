@@ -11,3 +11,10 @@ export const uploadFile = async (formData: FormData) => {
   if (error) throw Error(error.message);
   revalidatePath("/", "page");
 };
+
+export const deleteFile = async (path: string) => {
+  const supabase = createClient();
+  const { error } = await supabase.storage.from("main").remove([path]);
+  if (error) throw Error(error.message);
+  revalidatePath("/", "page");
+};
