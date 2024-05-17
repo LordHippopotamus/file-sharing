@@ -11,8 +11,7 @@ const FilesList = async () => {
   if (listError) throw Error(listError.message);
 
   return (
-    <ul>
-      <h3>Список файлов:</h3>
+    <ul className="flex flex-wrap gap-4 mt-4">
       {list.map((el) => (
         <Item path={el.name} key={el.id} />
       ))}
